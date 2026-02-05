@@ -53,4 +53,88 @@
                         </article>
                         <article class="card">
                             <h3>Desarrollo</h3>
-                            <p>Aplicaciones rápidas, seguras y escalables.
+                            <p>Aplicaciones rápidas, seguras y escalables.</p>
+                        </article>
+                        <article class="card">
+                            <h3>SEO & Performance</h3>
+                            <p>Optimización para buscadores y alto rendimiento.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section id="nosotros" class="section section-alt">
+                <div class="container">
+                    <div class="two-columns">
+                        <div>
+                            <h2>Sobre Nosotros</h2>
+                            <p>
+                            Somos un equipo enfocado en crear productos digitales de alta calidad,
+                            usando tecnologías modernas y buenas prácticas.
+                            </p>
+                        </div>
+                        <div>
+                          <img src="assets/about.jpg" alt="Equipo de trabajo - UPA ISC">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="contacto" class="section">
+                <div class="container">
+                    <header class="section-header">
+                        <h2>Contacto</h2>
+                        <p>Hablemos de tu próximo proyecto</p>
+                    </header>
+                        <form class="form">
+                        <input type="text" placeholder="Nombre" required />
+                        <input type="email" placeholder="Email" required />
+                        <textarea placeholder="Mensaje" rows="5" required></textarea>
+                        <button type="submit" class="btn btn-primary">Enviar Información</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container footer-content">
+                <p>
+                    &copy; 2026 Universidad Politécnica de Atlacomúlco Citlali Mondragón García;
+                    Todos los derechos reservados.
+                </p>
+            </div>
+        </footer>
+        <button class="scroll-top" aria-label="Volver arriba">
+            &uarr;
+        </button>
+        <script>
+            const toggle = document.querySelector('.nav-toggle');
+            const menu = document.querySelector('.nav-menu');
+
+            toggle.addEventListener('click', () => {
+                menu.classList.toggle('active');
+            });
+
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.remove('active');
+                });
+            });
+        </script>
+        <script>
+            const scrollTopBtn = document.querySelector('.scroll-top');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    scrollTopBtn.classList.add('show');
+                } else {
+                    scrollTopBtn.classList.remove('show');
+                }
+            });
+
+            scrollTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        </script>
+    </body>
+</html>
