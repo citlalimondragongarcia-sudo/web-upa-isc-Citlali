@@ -1,12 +1,30 @@
-function enviarMensaje(){
+function enviarMensaje() {
 
     const nombre = document.getElementById("nombre").value;
     const correo = document.getElementById("correo").value;
     const mensaje = document.getElementById("mensaje").value;
 
-    console.log("Datos ingresados: ", nombre, correo, mensaje);
+    const datos_validados = validarDatos(nombre) && validarDatos(correo) && validarDatos(mensaje);
 
-    alert("Datos:\n" + "Nombre: " +nombre + "\nCorreo: " + correo + "\nMensaje :" + mensaje)
+    if (datos_validados === true) {
+        alert("Los datos se ingresaron de manera correcta.");
+    } else {
+        alert("Por favor, ingrese todos los datos solicitados.");
+    }
 
-    return false; 
+    return false;
+}
+
+
+function validarDatos(valor) {
+ let validacion = false;
+
+
+
+    if (valor !== "" && valor !== null) {
+        return true;
+    }
+        return validacion
+    
+
 }
