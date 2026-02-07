@@ -16,15 +16,21 @@ function enviarMensaje() {
 }
 
 
-function validarDatos(valor) {
- let validacion = false;
+function validarDatos(elemento){
+    let validacion = false;
+    let valor_elemento = elemento.value;
 
-
-
-    if (valor !== "" && valor !== null) {
-        return true;
+    if(valor_elemento != "" && valor_elemento != null){
+        validacion = true;
+    } else {
+        mostrarError();
     }
-        return validacion
-    
 
+    return validacion
+}
+       
+
+
+function mostrarErro(elemento){
+   elemento.classList.add('input-error');
 }
